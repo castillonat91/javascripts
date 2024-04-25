@@ -8,10 +8,10 @@ body {
 
 #contenedor {
     width: 300px;
-    margin: 50px auto;
+    margin: 45px auto;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,13 +25,11 @@ h1 {
     list-style: none;
     display: inline-block;
     width: 50px;
-    height: 50px;
     line-height: 50px;
     text-align: center;
-    margin: 5px;
-    cursor: pointer;
+    margin: 4px;
     background-color: #a03434;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -54,13 +52,19 @@ h1 {
     padding: 10px;
     text-align: right;
     box-sizing: border-box;
+    
 }
 #Borrar {
-    width: 60px;
-    height: 20px;
-    background-color: burlywood; 
-    color: #ffffff;
+    background-color: #474fb3; 
+    color: white;
+    padding: 10px 30px;
     text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+}
+#Borrar:hover{
+    background-color: #02103d; 
 }
 .calculadora .igual {
     background-color: #69a169; 
