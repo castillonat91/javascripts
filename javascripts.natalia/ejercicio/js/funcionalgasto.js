@@ -42,9 +42,65 @@ class UI
     //insertarPresupuesto(cantidad);
     insertarPresupuesto(cantidad){
     document.querySelector('#restante').textContent = cantidad.restante;
-    document.querySelector('#total').textContent = cantidad.presupuesto;
-
+    document.querySelector('#total').textContent = cantidad.presupuesto
     }
+    
+    imprimirAlerta(menasje, tipo) {
+        //crear el div
+    const divMensaje = document.createElement('div');
+    divMensaje.classList.add('text-center','alert');
+
+    //si es de tipo error agregar una clase
+    if(tipo == 'error')
+        {
+            divMensaje.classList.add('alert-danger');
+        }else
+        {
+            divMensaje.classList.add('alert-succes');
+        }
+        //mensaje de error
+        divMensaje.textContent = mensaje;
+
+        //insertar en el dom
+        document.querySelector('.primario').insertBefore(divMensaje,formulario);
+
+        //quitar la alerta despues de 5 segundos
+        setTimeout( () =>{
+            document.querySelector('.primario .alert').remove();
+        },5000);
+    }
+
+    agregarGastosListado(){
+
+    
+
+        //limpiar el html
+        this.limpiarHTML();
+    
+        //definir el array para iterar los gastos que van ingresar
+        gasto.forEach(gasto => {
+            const{nombre, cantidad, id} = gasto;
+    
+            //creamos lista
+            const nuevogasto = document.createElement('li');
+            nuevogasto.className = 'list-group-item d-flex justifify-content-between align-items-center';
+            nuevogasto.dataset.id = id;
+    
+            //insertar el gasto en el html
+            nuevogasto.innerHTML = '${nombre}<span class="badge-primary badge-pill">$ ${cantidad}</span>';
+    
+            //crear el boton de borrar gasto
+            const btnBorrar = document.createElement('button');
+            btnBorrar.classList.add('btn','btn-danger','borrar-gasto');
+            btnBorrar.textContent = 'Borrar';
+            nuevogasto.appendChild(btnBorrar);
+    
+            //insertar en el html
+            listadogastos.appendChild(nuevogasto);
+        });
+    }
+
+    
 }
 
 
@@ -108,26 +164,5 @@ function agregarGastos()
 }
 function eliminarGastos()
 {
-     //crear el div
-     const divMensaje = document.createElement('div');
-     divMensaje.classList.add('text-center','alert');
- 
-     //si es de tipo error me agregar una clase
-     if(tipo == 'error')
-         {
-             divMensaje.classList.add('alert-danger');
-         }else
-         {
-             divMensaje.classList.add('alert-succes');
-         }
-         //mensaje de error
-         divMensaje.textContent = mensaje;
- 
-         //insertar en el dom
-         document.querySelector('.primario').insertBefore(divMensaje,formulario);
- 
-         //quitar la alerta despues de 5 segundos
-         setTimeout( () =>{
-             document.querySelector('.primario .alert').remove();
-         },5000);
+     
 }
