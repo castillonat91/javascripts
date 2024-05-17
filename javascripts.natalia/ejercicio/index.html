@@ -2,59 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilo.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ejercicio/css/bootstrap.css">
+    <link rel="stylesheet" href="/ejercicio/css/estilo.css">
+    <title>Control gastos</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 class="text-center">GASTOS SEMANALES</h1>
+            <h1 class="text-center">Gasto semanal</h1>
+
         </header>
         <section class="principal">
             <div class="row">
                 <div class="col">
-                    <div class="contenido gastos">
-                        <h2 class="text-center">AÑADIR LOS GASTOS AQUI</h2>
-                        <form id="agregar-gasto" action="#">
+                    <div class="contenido gasto">
+                        <h2 class="text-center">Añade tus gastos aqui</h2>
+                        <form action="#" id="agregar-gasto">
                             <div class="form-group">
-                                <label>Gastos:</label>
-                                <input type="text" class="form-control" id="gasto" placeholder="nombre del gasto">
-
+                                <label for="gasto">Gasto</label>
+                                <input type="text" class="form-control" id="gasto" placeholder="Nombre del gasto">
                             </div>
                             <div class="form-group">
-                                <label>Cantidad:</label>
+                                <label for="cantidad">Cantidad</label>
                                 <input type="number" class="form-control" id="cantidad" placeholder="Cantidad en $">
                             </div>
-                            <button type="submit" class="btn btn-danger">Agregar</button>
+                            <button type="submit" class="btn btn-outline-dark">Agregar</button>
 
                         </form>
                     </div>
+                    
                 </div>
                 <div class="col">
-                    <div class="contenido lista">
-                        <h2 class="text-center">LISTA DE GASTOS</h2>
-                        <div id="gastos">
-                            <ul class="list-goup"></ul>
-                        </div>
+                    <div class="contenido Listado">
+                        <h2 class="text-center">Listado</h2>
+                            <div id="gastos">
+                                <ul class="list-group"></ul>
+                            </div>
                         <div id="presupuesto" class="presupuesto">
-                            <div class="alert alert-primary">
-                                <p>Presupuesto: <span id="total"></span></p>
+                            <div class="alert alert-warning">
+                                <p>
+                                    Presupuesto: $
+                                    <span id="total"></span>
+                                </p>
                             </div>
-                            <div class="restante alert alert-success">
-                                <p>Restante: $<span id="restante"></span></p>
+                            <div class="restante alert alert-secondary">
+                                <p>
+                                    Restante: $
+                                    <span id="restante"></span>
+                                </p>
                             </div>
-
                         </div>
-
                     </div>
+                    
                 </div>
             </div>
 
-
         </section>
-    </div>
-<script src="js/funcionalgasto.js"></script>
 
+
+
+
+    </div>
+    <script src="/ejercicio/js/funcionalgasto.js"></script>
 </body>
 </html>

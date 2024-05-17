@@ -25,8 +25,8 @@ h2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 100;
     color: brown;
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 .presupuesto p{
     margin-bottom: 0;
@@ -36,5 +36,5 @@ h2{
     font-weight: normal;
 }
 #gastos{
-    margin-bottom: 60px;
+    margin-bottom: 35px;
 }
